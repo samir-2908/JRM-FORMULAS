@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Formulas</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            user-select: none; /* Prevent text selection */
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            padding: 1rem 2rem;
+            margin: 0 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ff0000;
+        }
+        .container {
+            flex: 1;
+            padding: 2rem;
+        }
+        .formula {
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5rem;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        #search {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid #ddd;
+        }
+        .highlight {
+            background-color: #ffffcc;
+            border-left: 5px solid #ffeb3b;
+            padding: 0.5rem;
+            margin: 0.5rem auto;
+            border-radius: 5px;
+            width: fit-content;
+            text-align: center;
+        }
+        .center-formula {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Physics Formulas</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="math.html">Mathematics Formulas</a>
+        <a href="chemistry.html">Chemistry</a>
+    </nav>
+    <div class="container">
+        <input type="text" id="search" placeholder="Search formulas..." onkeyup="searchFormulas()">
+
+        <div class="formula">
+            <h2>1. Mechanics</h2>
+            <h3>1.1 Kinematics</h3>
+            <p class="highlight center-formula"><strong>Distance:</strong> \( s = ut + \frac{1}{2}at^2 \)</p>
+            <p class="highlight center-formula"><strong>Velocity:</strong> \( v = u + at \)</p>
+            <p class="highlight center-formula"><strong>Acceleration:</strong> \( a = \frac{v - u}{t} \)</p>
+            <p class="highlight center-formula"><strong>Displacement:</strong> \( s = \frac{(u + v)t}{2} \)</p>
+            <p class="highlight center-formula"><strong>Uniform Acceleration:</strong> \( v^2 = u^2 + 2as \)</p>
+            <p class="highlight center-formula"><strong>Relative Velocity:</strong> \( v_{AB} = v_A - v_B \)</p>
+            <p class="highlight center-formula"><strong>Projectile Motion Range:</strong> \( R = \frac{v^2 \sin 2\theta}{g} \)</p>
+            <p class="highlight center-formula"><strong>Maximum Height of Projectile:</strong> \( H = \frac{v^2 \sin^2 \theta}{2g} \)</p>
+            <p class="highlight center-formula"><strong>Time of Flight for Projectile:</strong> \( T = \frac{2v \sin \theta}{g} \)</p>
+        
+            <h3>1.2 Dynamics</h3>
+            <p class="highlight center-formula"><strong>Newton's First Law:</strong> An object at rest stays at rest, and an object in motion stays in motion unless acted upon by an external force.</p>
+            <p class="highlight center-formula"><strong>Newton's Second Law:</strong> \( F = ma \)</p>
+            <p class="highlight center-formula"><strong>Newton's Third Law:</strong> For every action, there is an equal and opposite reaction.</p>
+            <p class="highlight center-formula"><strong>Friction Force:</strong> \( f = \mu N \)</p>
+            <p class="highlight center-formula"><strong>Work Done:</strong> \( W = F \cdot d \cdot \cos \theta \)</p>
+            <p class="highlight center-formula"><strong>Power:</strong> \( P = \frac{W}{t} \)</p>
+            <p class="highlight center-formula"><strong>Potential Energy:</strong> \( PE = mgh \)</p>
+            <p class="highlight center-formula"><strong>Kinetic Energy:</strong> \( KE = \frac{1}{2}mv^2 \)</p>
+            <p class="highlight center-formula"><strong>Work-Energy Theorem:</strong> \( W = \Delta KE \)</p>
+            <p class="highlight center-formula"><strong>Conservation of Energy:</strong> \( E_{total} = KE + PE \)</p>
+        
+            <h3>1.3 Work and Energy</h3>
+            <p class="highlight center-formula"><strong>Mechanical Work:</strong> \( W = F \cdot d \cdot \cos \theta \)</p>
+            <p class="highlight center-formula"><strong>Power:</strong> \( P = \frac{W}{t} = F \cdot v \)</p>
+            <p class="highlight center-formula"><strong>Elastic Potential Energy:</strong> \( PE_{elastic} = \frac{1}{2} k x^2 \)</p>
+            <p class="highlight center-formula"><strong>Work-Energy Principle:</strong> \( W_{net} = \Delta KE \)</p>
+            <p class="highlight center-formula"><strong>Power:</strong> \( P = \frac{dW}{dt} = F \cdot v \)</p>
+        
+            <h3>1.4 Rotational Dynamics</h3>
+            <p class="highlight center-formula"><strong>Torque:</strong> \( \tau = r \times F \)</p>
+            <p class="highlight center-formula"><strong>Moment of Inertia:</strong> \( I = \sum m_i r_i^2 \)</p>
+            <p class="highlight center-formula"><strong>Angular Momentum:</strong> \( L = I \cdot \omega \)</p>
+            <p class="highlight center-formula"><strong>Angular Kinetic Energy:</strong> \( KE_{rot} = \frac{1}{2} I \omega^2 \)</p>
+            <p class="highlight center-formula"><strong>Newton's Law for Rotation:</strong> \( \tau = I \cdot \alpha \)</p>
+            <p class="highlight center-formula"><strong>Angular Acceleration:</strong> \( \alpha = \frac{\Delta \omega}{t} \)</p>
+            <p class="highlight center-formula"><strong>Rotational Work:</strong> \( W_{rot} = \tau \cdot \theta \)</p>
+        
+            <h3>1.5 Gravitation</h3>
+            <p class="highlight center-formula"><strong>Universal Law of Gravitation:</strong> \( F = G \frac{m_1 m_2}{r^2} \)</p>
+            <p class="highlight center-formula"><strong>Gravitational Potential Energy:</strong> \( U = -G \frac{m_1 m_2}{r} \)</p>
+            <p class="highlight center-formula"><strong>Gravitational Field Strength:</strong> \( g = \frac{F}{m} = G \frac{M}{r^2} \)</p>
+            <p class="highlight center-formula"><strong>Acceleration Due to Gravity:</strong> \( g = 9.8 \text{ m/s}^2 \text{ (on the surface of Earth)} \)</p>
+            <p class="highlight center-formula"><strong>Gravitational Force on Surface:</strong> \( F_g = mg \)</p>
+            <p class="highlight center-formula"><strong>Orbital Velocity:</strong> \( v = \sqrt{ \frac{GM}{r} } \)</p>
+            <p class="highlight center-formula"><strong>Escape Velocity:</strong> \( v_{esc} = \sqrt{ \frac{2GM}{r} } \)</p>
+            <p class="highlight center-formula"><strong>Kepler's Third Law:</strong> \( T^2 \propto r^3 \)</p>
+        </div>
+        
+
+        <div class="formula">
+            <h2>2. Heat and Thermodynamics</h2>
+            <h3>2.1 Temperature and Heat</h3>
+            <p class="highlight center-formula"><strong>Heat Transfer:</strong> \( Q = mc\Delta T \)</p>
+            <p class="highlight center-formula"><strong>Specific Heat Capacity:</strong> \( c = \frac{Q}{m \Delta T} \)</p>
+            <p class="highlight center-formula"><strong>Latent Heat:</strong> \( Q = mL \)</p>
+            <p class="highlight center-formula"><strong>Latent Heat of Fusion:</strong> \( L_f = \frac{Q}{m} \text{ (for melting/freezing)} \)</p>
+            <p class="highlight center-formula"><strong>Latent Heat of Vaporization:</strong> \( L_v = \frac{Q}{m} \text{ (for boiling/condensation)} \)</p>
+            <p class="highlight center-formula"><strong>Thermal Expansion (Linear):</strong> \( \Delta L = \alpha L_0 \Delta T \)</p>
+            <p class="highlight center-formula"><strong>Thermal Expansion (Volume):</strong> \( \Delta V = \beta V_0 \Delta T \)</p>
+        
+            <h3>2.2 Thermodynamic Processes</h3>
+            <p class="highlight center-formula"><strong>Work Done by Gas (Isothermal):</strong> \( W = nRT \ln \frac{V_f}{V_i} \)</p>
+            <p class="highlight center-formula"><strong>Work Done by Gas (Adiabatic):</strong> \( W = \frac{P_1 V_1 - P_2 V_2}{\gamma - 1} \)</p>
+            <p class="highlight center-formula"><strong>First Law of Thermodynamics:</strong> \( \Delta U = Q - W \)</p>
+            <p class="highlight center-formula"><strong>Change in Internal Energy:</strong> \( \Delta U = n C_V \Delta T \)</p>
+            <p class="highlight center-formula"><strong>Heat Capacity at Constant Volume:</strong> \( C_V = \frac{\Delta U}{\Delta T} \)</p>
+            <p class="highlight center-formula"><strong>Heat Capacity at Constant Pressure:</strong> \( C_P = \frac{\Delta H}{\Delta T} \)</p>
+            <p class="highlight center-formula"><strong>Enthalpy:</strong> \( H = U + pV \)</p>
+            <p class="highlight center-formula"><strong>Adiabatic Process (Relation):</strong> \( PV^\gamma = \text{constant} \)</p>
+        
+            <h3>2.3 Laws of Thermodynamics</h3>
+            <p class="highlight center-formula"><strong>First Law of Thermodynamics:</strong> \( \Delta U = Q - W \)</p>
+            <p class="highlight center-formula"><strong>Second Law of Thermodynamics (Clausius Statement):</strong> Heat cannot spontaneously flow from a colder body to a hotter body.</p>
+            <p class="highlight center-formula"><strong>Second Law of Thermodynamics (Kelvin-Planck Statement):</strong> It is impossible to devise a cyclic process that converts all absorbed heat into work.</p>
+            <p class="highlight center-formula"><strong>Third Law of Thermodynamics:</strong> As temperature approaches absolute zero, the entropy of a system approaches a constant minimum.</p>
+            <p class="highlight center-formula"><strong>Entropy Change:</strong> \( \Delta S = \frac{Q}{T} \text{ (for reversible processes)} \)</p>
+            <p class="highlight center-formula"><strong>Carnot Efficiency:</strong> \( \eta = 1 - \frac{T_C}{T_H} \)</p>
+            <p class="highlight center-formula"><strong>Ideal Gas Law:</strong> \( PV = nRT \)</p>
+            <p class="highlight center-formula"><strong>Boyle's Law:</strong> \( P_1 V_1 = P_2 V_2 \text{ (at constant temperature)} \)</p>
+            <p class="highlight center-formula"><strong>Charles's Law:</strong> \( \frac{V_1}{T_1} = \frac{V_2}{T_2} \text{ (at constant pressure)} \)</p>
+            <p class="highlight center-formula"><strong>Gay-Lussac's Law:</strong> \( \frac{P_1}{T_1} = \frac{P_2}{T_2} \text{ (at constant volume)} \)</p>
+        
+            <h3>2.4 Heat Transfer</h3>
+            <p class="highlight center-formula"><strong>Conduction:</strong> \( Q = \frac{kA \Delta T t}{d} \)</p>
+            <p class="highlight center-formula"><strong>Convection:</strong> \( Q = hA \Delta T t \)</p>
+            <p class="highlight center-formula"><strong>Radiation:</strong> \( Q = \sigma \epsilon A T^4 t \)</p>
+            <p class="highlight center-formula"><strong>Stefan-Boltzmann Law:</strong> \( E = \sigma T^4 \)</p>
+        </div>
+        
+        <div class="formula">
+            <h2>3. Geometric and Physical Optics</h2>
+        
+            <h3>3.1 Geometric Optics</h3>
+            <p class="highlight center-formula"><strong>Lens Maker's Formula:</strong> \( \frac{1}{f} = \left( \frac{n - 1}{R_1} - \frac{n - 1}{R_2} \right) \)</p>
+            <p class="highlight center-formula"><strong>Mirror Formula:</strong> \( \frac{1}{f} = \frac{1}{u} + \frac{1}{v} \)</p>
+            <p class="highlight center-formula"><strong>Magnification (Mirror):</strong> \( M = \frac{v}{u} \)</p>
+            <p class="highlight center-formula"><strong>Lens Formula:</strong> \( \frac{1}{f} = \frac{1}{v} - \frac{1}{u} \)</p>
+            <p class="highlight center-formula"><strong>Magnification (Lens):</strong> \( M = \frac{v}{u} \)</p>
+            <p class="highlight center-formula"><strong>Refractive Index:</strong> \( n = \frac{c}{v} \)</p>
+            <p class="highlight center-formula"><strong>Snell's Law:</strong> \( n_1 \sin \theta_1 = n_2 \sin \theta_2 \)</p>
+            <p class="highlight center-formula"><strong>Critical Angle:</strong> \( \theta_c = \sin^{-1} \left( \frac{n_2}{n_1} \right) \)</p>
+            <p class="highlight center-formula"><strong>Focal Length of a Thin Lens:</strong> \( \frac{1}{f} = \left( \frac{n - 1}{R_1} - \frac{n - 1}{R_2} \right) \)</p>
+            <p class="highlight center-formula"><strong>Lens Combination Formula:</strong> \( \frac{1}{f_{\text{total}}} = \frac{1}{f_1} + \frac{1}{f_2} \)</p>
+            <p class="highlight center-formula"><strong>Lens Equation for Multiple Lenses:</strong> \( \frac{1}{f_{\text{effective}}} = \frac{1}{f_1} + \frac{1}{f_2} - \frac{d}{f_1 f_2} \)</p>
+            <p class="highlight center-formula"><strong>Angular Magnification:</strong> \( M_a = \frac{D}{f_{\text{eye}}} \text{ where } D \text{ is the least distance of distinct vision} \)</p>
+        
+            <h3>3.2 Physical Optics</h3>
+            <p class="highlight center-formula"><strong>Young's Double Slit Experiment (Path Difference):</strong> \( d \sin \theta = m \lambda \)</p>
+            <p class="highlight center-formula"><strong>Path Difference:</strong> \( \Delta x = d \sin \theta \)</p>
+            <p class="highlight center-formula"><strong>Fringe Separation (Young's Experiment):</strong> \( \beta = \frac{\lambda D}{d} \)</p>
+            <p class="highlight center-formula"><strong>Diffraction Grating Equation:</strong> \( d \sin \theta = m \lambda \)</p>
+            <p class="highlight center-formula"><strong>Rayleigh Criterion (Resolution):</strong> \( \theta = 1.22 \frac{\lambda}{D} \)</p>
+            <p class="highlight center-formula"><strong>Huygens' Principle:</strong> Each point on a wavefront acts as a source of secondary wavelets</p>
+            <p class="highlight center-formula"><strong>Interference Condition:</strong> \( \Delta \phi = 2n\pi \text{ (constructive interference)}, \Delta \phi = (2n + 1)\pi \text{ (destructive interference)} \)</p>
+            <p class="highlight center-formula"><strong>Polarization (Malus' Law):</strong> \( I = I_0 \cos^2 \theta \)</p>
+            <p class="highlight center-formula"><strong>Polarizing Angle (Brewster's Angle):</strong> \( \tan \theta_p = \frac{n_2}{n_1} \)</p>
+            <p class="highlight center-formula"><strong>Absorption of Light:</strong> \( I = I_0 e^{-\alpha x} \)</p>
+            <p class="highlight center-formula"><strong>Dispersion:</strong> \( \text{The separation of light into its constituent colors due to varying speeds in different media} \)</p>
+            <p class="highlight center-formula"><strong>Chromatic Aberration:</strong> \( \text{The failure of a lens to focus all colors to the same point} \)</p>
+            <p class="highlight center-formula"><strong>Diffraction Pattern (Single Slit):</strong> \( a \sin \theta = m \lambda \)</p>
+            <p class="highlight center-formula"><strong>Angular Width of Central Maximum (Single Slit):</strong> \( \Delta \theta = \frac{2 \lambda}{a} \)</p>
+            <p class="highlight center-formula"><strong>Coherence Length:</strong> \( L_c = \frac{\lambda^2}{\Delta \lambda} \)</p>
+            <p class="highlight center-formula"><strong>Fraunhofer Diffraction (Single Slit):</strong> \( I(\theta) = I_0 \left( \frac{\sin(\beta/2)}{\beta/2} \right)^2 \text{ where } \beta = \frac{2 \pi a \sin \theta}{\lambda} \)</p>
+            <p class="highlight center-formula"><strong>Fraunhofer Diffraction (Double Slit):</strong> \( I(\theta) = I_0 \left( \frac{\sin(N\beta/2)}{\sin(\beta/2)} \right)^2 \left( \frac{\sin^2(\alpha/2)}{(\alpha/2)^2} \right) \text{ where } \alpha = \frac{2 \pi d \sin \theta}{\lambda} \text{ and } N \text{ is the number of slits} \)</p>
+            <p class="highlight center-formula"><strong>Optical Path Length (OPL):</strong> \( \text{OPL} = n \cdot \text{distance} \)</p>
+            <p class="highlight center-formula"><strong>Optical Coherence:</strong> \( \text{The degree to which light waves are correlated in time and space} \)</p>
+        </div>
+        
+
+        
+
+        <div class="formula">
+            <h2>4. Waves and Sound</h2>
+            
+            <h3>4.1 Wave Basics</h3>
+            <p class="highlight center-formula"><strong>Wave Speed:</strong> \( v = \frac{d}{t} \)</p>
+            <p class="highlight center-formula"><strong>Wave Equation:</strong> \( v = f \lambda \)</p>
+            <p class="highlight center-formula"><strong>Frequency:</strong> \( f = \frac{1}{T} \)</p>
+            <p class="highlight center-formula"><strong>Wavelength:</strong> \( \lambda = \frac{v}{f} \)</p>
+            <p class="highlight center-formula"><strong>Amplitude:</strong> The maximum displacement from the equilibrium position</p>
+            <p class="highlight center-formula"><strong>Period:</strong> \( T = \frac{1}{f} \)</p>
+            <p class="highlight center-formula"><strong>Wave Number:</strong> \( k = \frac{2\pi}{\lambda} \)</p>
+            <p class="highlight center-formula"><strong>Angular Frequency:</strong> \( \omega = 2\pi f \)</p>
+        
+            <h3>4.2 Types of Waves</h3>
+            <p class="highlight center-formula"><strong>Transverse Wave:</strong> Particles move perpendicular to the direction of wave propagation</p>
+            <p class="highlight center-formula"><strong>Longitudinal Wave:</strong> Particles move parallel to the direction of wave propagation</p>
+            <p class="highlight center-formula"><strong>Wave Pulse:</strong> A single disturbance moving through a medium</p>
+            <p class="highlight center-formula"><strong>Periodic Wave:</strong> A wave that repeats at regular intervals</p>
+            <p class="highlight center-formula"><strong>Complex Wave:</strong> A wave composed of multiple simple harmonic waves</p>
+            <p class="highlight center-formula"><strong>Traveling Wave:</strong> A wave that moves through space or a medium</p>
+            <p class="highlight center-formula"><strong>Standing Wave:</strong> A wave that remains in a constant position</p>
+        
+            <h3>4.3 Sound Waves</h3>
+            <p class="highlight center-formula"><strong>Speed of Sound in Air:</strong> \( v = 331.3 + 0.6 T \text{ (where } T \text{ is temperature in } ^\circ \text{C)} \)</p>
+            <p class="highlight center-formula"><strong>Intensity:</strong> \( I = \frac{P}{A} \)</p>
+            <p class="highlight center-formula"><strong>Decibel Level:</strong> \( \beta = 10 \log \left(\frac{I}{I_0}\right) \)</p>
+            <p class="highlight center-formula"><strong>Sound Level Change:</strong> \( \Delta \beta = 10 \log \left(\frac{I_2}{I_1}\right) \)</p>
+            <p class="highlight center-formula"><strong>Fundamental Frequency:</strong> \( f_1 = \frac{v}{2L} \)</p>
+            <p class="highlight center-formula"><strong>Overtones:</strong> \( f_n = n \cdot f_1 \text{ (where } n \text{ is the harmonic number)} \)</p>
+            <p class="highlight center-formula"><strong>Beat Frequency:</strong> \( f_{\text{beat}} = |f_1 - f_2| \)</p>
+            <p class="highlight center-formula"><strong>Doppler Effect:</strong> \( f' = f \left(\frac{v \pm v_o}{v \mp v_s}\right) \)</p>
+            <p class="highlight center-formula"><strong>Sound Intensity and Distance:</strong> \( I \propto \frac{1}{r^2} \)</p>
+            <p class="highlight center-formula"><strong>Frequency of a Tuning Fork:</strong> \( f = \frac{v}{\lambda} \)</p>
+            <p class="highlight center-formula"><strong>Resonant Frequency of a Tube:</strong> \( f_n = \frac{n v}{2L} \text{ (closed tube)} \)</p>
+        
+            <h3>4.4 Interference and Resonance</h3>
+            <p class="highlight center-formula"><strong>Constructive Interference:</strong> Occurs when \( \Delta \phi = 2n\pi \)</p>
+            <p class="highlight center-formula"><strong>Destructive Interference:</strong> Occurs when \( \Delta \phi = (2n + 1)\pi \)</p>
+            <p class="highlight center-formula"><strong>Resonance Condition:</strong> \( f_n = \frac{n v}{2L} \)</p>
+            <p class="highlight center-formula"><strong>Standing Wave Pattern:</strong> \( \lambda_n = \frac{2L}{n} \)</p>
+            <p class="highlight center-formula"><strong>Nodes and Antinodes:</strong> Nodes are points of minimum amplitude; Antinodes are points of maximum amplitude</p>
+            <p class="highlight center-formula"><strong>Superposition Principle:</strong> The resultant displacement is the sum of the individual displacements</p>
+            <p class="highlight center-formula"><strong>Interference Pattern (Double Slit):</strong> \( y = \frac{m \lambda D}{d} \)</p>
+            <p class="highlight center-formula"><strong>Diffraction Grating:</strong> \( d \sin \theta = m \lambda \)</p>
+            <p class="highlight center-formula"><strong>Beat Frequency Formula:</strong> \( f_{\text{beat}} = |f_1 - f_2| \)</p>
+        </div>
+        <div class="formula">
+            <h2>5. Electricity and Magnetism</h2>
+            <h3>5.1 Electrostatics</h3>
+            <p class="highlight center-formula"><strong>Coulomb's Law:</strong> \( F = k_e \frac{q_1 q_2}{r^2} \)</p>
+            <p class="highlight center-formula"><strong>Electric Field:</strong> \( E = \frac{F}{q} = k_e \frac{Q}{r^2} \)</p>
+            <p class="highlight center-formula"><strong>Electric Potential:</strong> \( V = \frac{U}{q} = k_e \frac{Q}{r} \)</p>
+            <p class="highlight center-formula"><strong>Potential Difference:</strong> \( V = IR \)</p>
+            <p class="highlight center-formula"><strong>Capacitance:</strong> \( C = \frac{Q}{V} \)</p>
+            <p class="highlight center-formula"><strong>Energy Stored in a Capacitor:</strong> \( U = \frac{1}{2} C V^2 \)</p>
+            <p class="highlight center-formula"><strong>Capacitors in Series:</strong> \( \frac{1}{C_{\text{eq}}} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots + \frac{1}{C_n} \)</p>
+            <p class="highlight center-formula"><strong>Capacitors in Parallel:</strong> \( C_{\text{eq}} = C_1 + C_2 + \cdots + C_n \)</p>
+        
+            <h3>5.2 Current and Circuits</h3>
+            <p class="highlight center-formula"><strong>Ohm's Law:</strong> \( V = IR \)</p>
+            <p class="highlight center-formula"><strong>Power in a Circuit:</strong> \( P = VI = I^2 R = \frac{V^2}{R} \)</p>
+            <p class="highlight center-formula"><strong>Kirchhoff's Voltage Law:</strong> \( \sum V_{\text{around}} = 0 \)</p>
+            <p class="highlight center-formula"><strong>Kirchhoff's Current Law:</strong> \( \sum I_{\text{at a junction}} = 0 \)</p>
+            <p class="highlight center-formula"><strong>Series Circuit:</strong> \( R_{\text{total}} = R_1 + R_2 + \cdots + R_n \)</p>
+            <p class="highlight center-formula"><strong>Parallel Circuit:</strong> \( \frac{1}{R_{\text{total}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_n} \)</p>
+            <p class="highlight center-formula"><strong>Resistor-Resistor Combinations:</strong> \( R_{\text{total}} = \frac{V}{I} \)</p>
+        
+            <h3>5.3 Electromagnetism</h3>
+            <p class="highlight center-formula"><strong>Magnetic Field of a Current-Carrying Wire:</strong> \( B = \frac{\mu_0 I}{2 \pi r} \)</p>
+            <p class="highlight center-formula"><strong>Magnetic Force on a Moving Charge:</strong> \( F = q v B \sin \theta \)</p>
+            <p class="highlight center-formula"><strong>Faraday's Law of Electromagnetic Induction:</strong> \( \mathcal{E} = - \frac{d \Phi_B}{dt} \)</p>
+            <p class="highlight center-formula"><strong>Lenz's Law:</strong> The direction of induced current is such that it opposes the change in magnetic flux.</p>
+            <p class="highlight center-formula"><strong>Self-Inductance:</strong> \( \mathcal{E} = -L \frac{dI}{dt} \)</p>
+            <p class="highlight center-formula"><strong>Mutual Inductance:</strong> \( \mathcal{E}_2 = -M \frac{dI_1}{dt} \)</p>
+            <p class="highlight center-formula"><strong>Magnetic Flux:</strong> \( \Phi_B = B \cdot A \cdot \cos \theta \)</p>
+            <p class="highlight center-formula"><strong>Biot-Savart Law:</strong> \( \mathbf{B} = \frac{\mu_0}{4 \pi} \int \frac{I d\mathbf{l} \times \mathbf{r}}{r^3} \)</p>
+        
+            <h3>5.4 Alternating Current (AC) Circuits</h3>
+            <p class="highlight center-formula"><strong>Impedance in an RLC Circuit:</strong> \( Z = \sqrt{R^2 + (X_L - X_C)^2} \)</p>
+            <p class="highlight center-formula"><strong>Reactance of an Inductor:</strong> \( X_L = \omega L \)</p>
+            <p class="highlight center-formula"><strong>Reactance of a Capacitor:</strong> \( X_C = \frac{1}{\omega C} \)</p>
+            <p class="highlight center-formula"><strong>Resonance Frequency:</strong> \( \omega_0 = \frac{1}{\sqrt{LC}} \)</p>
+            <p class="highlight center-formula"><strong>Average Power in AC Circuit:</strong> \( P = V_{rms} I_{rms} \cos \phi \)</p>
+            <p class="highlight center-formula"><strong>Power Factor:</strong> \( \cos \phi = \frac{R}{Z} \)</p>
+            <p class="highlight center-formula"><strong>Root Mean Square Voltage:</strong> \( V_{rms} = \frac{V_{peak}}{\sqrt{2}} \)</p>
+            <p class="highlight center-formula"><strong>Root Mean Square Current:</strong> \( I_{rms} = \frac{I_{peak}}{\sqrt{2}} \)</p>
+        </div>
+
+        <div class="formula">
+            <h2>6. Modern Physics</h2>
+            
+            <h3>6.1 Quantum Mechanics</h3>
+            <p class="highlight center-formula"><strong>Photoelectric Effect:</strong> \( E_k = h\nu - \phi \)</p>
+            <p class="highlight center-formula"><strong>de Broglie Wavelength:</strong> \( \lambda = \frac{h}{p} \)</p>
+            <p class="highlight center-formula"><strong>Heisenberg Uncertainty Principle:</strong> \( \Delta x \Delta p \geq \frac{\hbar}{2} \)</p>
+            <p class="highlight center-formula"><strong>Schrödinger Equation:</strong> \( i\hbar \frac{\partial \psi}{\partial t} = \hat{H} \psi \)</p>
+            <p class="highlight center-formula"><strong>Energy Quantization (Particle in a Box):</strong> \( E_n = \frac{n^2 h^2}{8mL^2} \)</p>
+            <p class="highlight center-formula"><strong>Wave Function Normalization:</strong> \( \int |\psi(x)|^2 \, dx = 1 \)</p>
+            <p class="highlight center-formula"><strong>Compton Effect:</strong> \( \lambda' - \lambda = \frac{h}{m_e c} (1 - \cos \theta) \)</p>
+            <p class="highlight center-formula"><strong>Pauli Exclusion Principle:</strong> No two fermions can occupy the same quantum state.</p>
+            <p class="highlight center-formula"><strong>Planck's Quantization:</strong> \( E_n = (n + \frac{1}{2})h\nu \)</p>
+        
+            <h3>6.2 Atomic Physics</h3>
+            <p class="highlight center-formula"><strong>Bohr's Model (Energy Levels):</strong> \( E_n = -\frac{k e^2}{2a_0 n^2} \)</p>
+            <p class="highlight center-formula"><strong>Rydberg Formula:</strong> \( \frac{1}{\lambda} = R \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right) \)</p>
+            <p class="highlight center-formula"><strong>Energy of Photon:</strong> \( E = h\nu \)</p>
+            <p class="highlight center-formula"><strong>Line Spectra:</strong> \( E = h \nu = \frac{hc}{\lambda} \)</p>
+            <p class="highlight center-formula"><strong>Zeeman Effect:</strong> \( \Delta E = \pm \frac{e}{2m_e} B m_j \)</p>
+            <p class="highlight center-formula"><strong>Stark Effect:</strong> \( \Delta E = \frac{e}{4 \pi \epsilon_0} \langle \psi | r | \psi \rangle E \)</p>
+        
+            <h3>6.3 Nuclear Physics</h3>
+            <p class="highlight center-formula"><strong>Binding Energy:</strong> \( E_B = (Z m_p + (A - Z) m_n - m_{\text{nucleus}}) c^2 \)</p>
+            <p class="highlight center-formula"><strong>Radioactive Decay Law:</strong> \( N(t) = N_0 e^{-\lambda t} \)</p>
+            <p class="highlight center-formula"><strong>Half-Life:</strong> \( t_{1/2} = \frac{\ln 2}{\lambda} \)</p>
+            <p class="highlight center-formula"><strong>Decay Constant:</strong> \( \lambda = \frac{\ln 2}{t_{1/2}} \)</p>
+            <p class="highlight center-formula"><strong>Alpha Decay Energy:</strong> \( E = \frac{(m_{\text{parent}} - m_{\text{daughter}} - m_{\alpha}) c^2}{1 - \frac{v^2}{c^2}} \)</p>
+            <p class="highlight center-formula"><strong>Beta Decay Energy:</strong> \( E = \frac{(m_{\text{parent}} - m_{\text{daughter}}) c^2 - m_e c^2}{1 - \frac{v^2}{c^2}} \)</p>
+            <p class="highlight center-formula"><strong>Fission Energy:</strong> \( E_{\text{fission}} = \Delta m c^2 \)</p>
+            <p class="highlight center-formula"><strong>Fusion Energy:</strong> \( E_{\text{fusion}} = \Delta m c^2 \)</p>
+        
+            <h3>6.4 Relativity</h3>
+            <p class="highlight center-formula"><strong>Time Dilation:</strong> \( \Delta t = \frac{\Delta t_0}{\sqrt{1 - \frac{v^2}{c^2}}} \)</p>
+            <p class="highlight center-formula"><strong>Length Contraction:</strong> \( L = L_0 \sqrt{1 - \frac{v^2}{c^2}} \)</p>
+            <p class="highlight center-formula"><strong>Mass-Energy Equivalence:</strong> \( E = mc^2 \)</p>
+            <p class="highlight center-formula"><strong>Relativistic Momentum:</strong> \( p = \frac{mv}{\sqrt{1 - \frac{v^2}{c^2}}} \)</p>
+            <p class="highlight center-formula"><strong>Relativistic Energy:</strong> \( E = \sqrt{(pc)^2 + (mc^2)^2} \)</p>
+            <p class="highlight center-formula"><strong>Relativistic Doppler Effect:</strong> \( \nu' = \nu \sqrt{\frac{1 - \frac{v}{c}}{1 + \frac{v}{c}}} \)</p>
+            <p class="highlight center-formula"><strong>Einstein's Field Equations:</strong> \( G_{\mu \nu} = \frac{8 \pi G}{c^4} T_{\mu \nu} \)</p>
+            <p class="highlight center-formula"><strong>Schwarzschild Radius:</strong> \( r_s = \frac{2GM}{c^2} \)</p>
+        </div>
+        
+        
+        
+    </div>
+    <footer>
+        <p>&copy; 2024 Physics Formulas</p>
+        <p>Feedback and suggestions? Join our <a href="https://discord.gg/7NhttJdyeC" target="_blank">Discord server</a>.</p>
+    </footer>
+    
+    <script>
+        // Disable text selection
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+    
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    
+        // Disable copying
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+    
+        // Prevent screenshot by preventing developer tools (basic protection)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'PrintScreen') {
+                e.preventDefault();
+            }
+        });
+    
+        // Disable printing (Ctrl + P) and ask for admin login
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                askAdminLogin();
+            }
+        });
+    
+        function askAdminLogin() {
+            const adminPassword = "CRUISE_2908i"; // Replace with your actual admin password
+            const userPassword = prompt("Enter admin password to print this page:");
+            if (userPassword === adminPassword) {
+                alert("Login successful. You can now print the page.");
+                window.print();
+            } else {
+                alert("Incorrect password. You cannot print this page.");
+            }
+        }
+
+        function searchFormulas() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let formulas = document.querySelectorAll('.formula');
+            formulas.forEach(formula => {
+                let text = formula.textContent.toLowerCase();
+                formula.style.display = text.includes(input) ? 'block' : 'none';
+            });
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry Topics</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            user-select: none;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #000000;
+            padding: 1rem 2rem;
+            margin: 0 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+
+        .container {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .formula {
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+        }
+
+        #search {
+            margin-bottom: 1.5rem;
+            padding: 0.75rem;
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .highlight {
+            background-color: #ffffcc;
+            border-left: 5px solid #ffeb3b;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            width: fit-content;
+            text-align: center;
+        }
+
+        .center-formula {
+            text-align: center;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        a:hover {
+            color: #4CAF50;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                padding: 0.5rem 1rem;
+                margin: 0 0.5rem;
+            }
+
+            #search {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Chemistry Topics</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="physics.html">Physics</a>
+        <a href="math.html">Mathematics</a>
+    </nav>
+
+    <div class="container">
+        <input type="text" id="search" placeholder="Search topics..." onkeyup="searchTopics()">
+
+        <div class="section">
+            <h2>1. Physical Chemistry</h2>
+        
+            <h3>1.1 Chemical Arithmetic</h3>
+            <p class="highlight center-formula"><strong>Dalton’s Atomic Theory:</strong> Atoms are indivisible particles that combine to form compounds.</p>
+            <p class="highlight center-formula"><strong>Law of Conservation of Mass:</strong> Mass cannot be created or destroyed in a chemical reaction.</p>
+            <p class="highlight center-formula"><strong>Law of Definite Proportions:</strong> A chemical compound always contains the same proportion of elements by mass.</p>
+            <p class="highlight center-formula"><strong>Empirical Formula:</strong> The simplest whole-number ratio of atoms in a compound.</p>
+            <p class="highlight center-formula"><strong>Molecular Formula:</strong> Shows the actual number of atoms of each element in a molecule.</p>
+            <p class="highlight center-formula"><strong>Limiting Reactant:</strong> The reactant that is completely consumed in a reaction.</p>
+            <p class="highlight center-formula"><strong>Avogadro's Hypothesis:</strong> Equal volumes of gases, at the same temperature and pressure, contain equal numbers of molecules.</p>
+            <p class="highlight center-formula"><strong>Equivalent Mass:</strong> Mass of one equivalent of a substance, used in reactions.</p>
+            <p class="highlight center-formula"><strong>Avogadro's Number:</strong> \( N_A = 6.022 \times 10^{23} \text{ mol}^{-1} \)</p>
+            <p class="highlight center-formula"><strong>Mole Concept:</strong> \( \text{Number of Moles} = \frac{\text{Mass}}{\text{Molar Mass}} \)</p>
+            <p class="highlight center-formula"><strong>Percentage Composition:</strong> \( \% \text{Element} = \frac{\text{Mass of Element in Compound}}{\text{Molar Mass of Compound}} \times 100 \)</p>
+            <p class="highlight center-formula"><strong>Dilution Formula:</strong> \( M_1V_1 = M_2V_2 \)</p>
+        
+            <h3>1.2 State of Matter</h3>
+            <p class="highlight center-formula"><strong>Ideal Gas Law:</strong> \( PV = nRT \)</p>
+            <p class="highlight center-formula"><strong>Boyle’s Law:</strong> \( P_1V_1 = P_2V_2 \) (at constant temperature)</p>
+            <p class="highlight center-formula"><strong>Charles’s Law:</strong> \( \frac{V_1}{T_1} = \frac{V_2}{T_2} \) (at constant pressure)</p>
+            <p class="highlight center-formula"><strong>Avogadro’s Law:</strong> \( \frac{V_1}{n_1} = \frac{V_2}{n_2} \) (at constant temperature and pressure)</p>
+            <p class="highlight center-formula"><strong>Van der Waals Equation:</strong> \( [P + a \frac{n^2}{V^2}] [V - nb] = nRT \)</p>
+            <p class="highlight center-formula"><strong>Dalton's Law of Partial Pressures:</strong> \( P_{\text{total}} = P_1 + P_2 + \dots + P_n \)</p>
+            <p class="highlight center-formula"><strong>Graham's Law of Effusion:</strong> \( \frac{\text{Rate of Effusion}_1}{\text{Rate of Effusion}_2} = \sqrt{\frac{M_2}{M_1}} \)</p>
+            <p class="highlight center-formula"><strong>Root Mean Square Velocity:</strong> \( u_{\text{rms}} = \sqrt{\frac{3RT}{M}} \)</p>
+            <p class="highlight center-formula"><strong>Compressibility Factor:</strong> \( Z = \frac{PV}{nRT} \) (for real gases)</p>
+        
+            <h3>1.3 Atomic Structure and Periodic Classification of Elements</h3>
+            <p class="highlight center-formula"><strong>Planck’s Equation:</strong> \( E = h \nu \)</p>
+            <p class="highlight center-formula"><strong>Bohr’s Model of the Atom:</strong> \( E_n = -\frac{13.6 \text{ eV}}{n^2} \)</p>
+            <p class="highlight center-formula"><strong>Heisenberg Uncertainty Principle:</strong> \( \Delta x \Delta p \geq \frac{h}{4 \pi} \)</p>
+            <p class="highlight center-formula"><strong>Schrödinger Equation:</strong> \( \hat{H} \psi = E \psi \)</p>
+            <p class="highlight center-formula"><strong>Periodic Table Trends:</strong> Electronegativity increases across a period and decreases down a group.</p>
+            <p class="highlight center-formula"><strong>Rydberg Formula:</strong> \( \frac{1}{\lambda} = R \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right) \) (for spectral lines)</p>
+            <p class="highlight center-formula"><strong>De Broglie Wavelength:</strong> \( \lambda = \frac{h}{mv} \)</p>
+            <p class="highlight center-formula"><strong>Pauli Exclusion Principle:</strong> No two electrons in an atom can have the same set of four quantum numbers.</p>
+            <p class="highlight center-formula"><strong>Aufbau Principle:</strong> Electrons occupy the lowest energy orbital available.</p>
+        
+            <h3>1.4 Oxidation, Reduction, and Equilibrium</h3>
+            <p class="highlight center-formula"><strong>Oxidation Number:</strong> The charge of an atom in a compound.</p>
+            <p class="highlight center-formula"><strong>Balancing Redox Reactions:</strong> Equalize the number of electrons lost and gained.</p>
+            <p class="highlight center-formula"><strong>Nernst Equation:</strong> \( E = E^0 - \frac{RT}{nF} \ln Q \)</p>
+            <p class="highlight center-formula"><strong>Le Chatelier's Principle:</strong> If a dynamic equilibrium is disturbed, the system adjusts to counteract the disturbance.</p>
+            <p class="highlight center-formula"><strong>Equilibrium Constant (K):</strong> \( K = \frac{[\text{Products}]}{[\text{Reactants}]} \)</p>
+            <p class="highlight center-formula"><strong>Standard Electrode Potential (\( E^0 \)):</strong> \( E^0_{\text{cell}} = E^0_{\text{cathode}} - E^0_{\text{anode}} \)</p>
+            <p class="highlight center-formula"><strong>Redox Titrations:</strong> \( V_1N_1 = V_2N_2 \)</p>
+            <p class="highlight center-formula"><strong>Ksp (Solubility Product):</strong> \( K_{\text{sp}} = [\text{A}^m]^a \times [\text{B}^n]^b \) for a salt \( A_mB_n \) dissolving in water.</p>
+            <p class="highlight center-formula"><strong>Common Ion Effect:</strong> The suppression of the degree of dissociation of a weak electrolyte by the addition of a common ion.</p>
+        
+            <h3>1.5 Volumetric Analysis</h3>
+            <p class="highlight center-formula"><strong>Molarity (M):</strong> \( M = \frac{\text{n}}{\text{V}} \)</p>
+            <p class="highlight center-formula"><strong>Normality (N):</strong> \( N = \frac{\text{Equivalents}}{\text{Volume}} \)</p>
+            <p class="highlight center-formula"><strong>Equivalent Weight:</strong> The mass of a substance that reacts with or supplies one mole of hydrogen ions.</p>
+            <p class="highlight center-formula"><strong>Volume of Titrant:</strong> \( V_1C_1 = V_2C_2 \) (for acid-base titrations)</p>
+            <p class="highlight center-formula"><strong>End Point Determination:</strong> The point at which the reaction is complete, usually indicated by a color change.</p>
+            <p class="highlight center-formula"><strong>Indicators in Acid-Base Titrations:</strong> \( \text{Phenolphthalein: Pink (Basic), Colorless (Acidic)} \)</p>
+            <p class="highlight center-formula"><strong>Gravimetric Analysis:</strong> \( \text{Mass} = \text{Equivalent Weight} \times \text{Number of Equivalents} \)</p>
+            <p class="highlight center-formula"><strong>Primary Standard:</strong> A highly pure substance that serves as a reference for titrations.</p>
+        
+            <h3>1.6 Ionic Equilibrium, Acid, Base, and Salt</h3>
+            <p class="highlight center-formula"><strong>pH Calculation:</strong> \( \text{pH} = -\log[\text{H}^+] \)</p>
+            <p class="highlight center-formula"><strong>Buffer Solutions:</strong> Resists changes in pH upon the addition of small amounts of acid or base.</p>
+            <p class="highlight center-formula"><strong>Salt Hydrolysis:</strong> Reaction of a salt with water to form an acidic or basic solution.</p>
+            <p class="highlight center-formula"><strong>Water Dissociation Constant (\( K_w \)):</strong> \( K_w = [\text{H}^+][\text{OH}^-] = 1 \times 10^{-14} \text{ at } 25^\circ\text{C} \)</p>
+            <p class="highlight center-formula"><strong>Ka and Kb Relationship:</strong> \( K_w = K_a \times K_b \)</p>
+            <p class="highlight center-formula"><strong>Hydrolysis Constant:</strong> \( K_h = \frac{K_w}{K_b} \) for a salt of a weak base and strong acid.</p>
+            <p class="highlight center-formula"><strong>Degree of Ionization:</strong> \( \alpha = \frac{C_{\text{ionized}}}{C_{\text{initial}}} \)</p>
+        
+            <h3>1.7 Electrochemistry</h3>
+            <p class="highlight center-formula"><strong>Electrolysis:</strong> The process of driving a non-spontaneous reaction using electrical energy.</p>
+            <p class="highlight center-formula"><strong>Faraday’s Laws of Electrolysis:</strong> The amount of substance produced at an electrode is proportional to the quantity of electricity passed through the electrolyte.</p>
+            <p class="highlight center-formula"><strong>Electrolytic Conductance:</strong> \( \Lambda_m = \frac{\kappa}{C} \)</p>
+            <p class="highlight center-formula"><strong>Kohlrausch’s Law:</strong> \( \Lambda_m^\circ = \Lambda_m^\circ(\text{cation}) + \Lambda_m^\circ(\text{anion}) \)</p>
+            <p class="highlight center-formula"><strong>Electrode Potential at Non-Standard Conditions:</strong> \( E = E^0 - \frac{RT}{nF} \ln \frac{[\text{Red}]}{[\text{Ox}]} \)</p>
+            <p class="highlight center-formula"><strong>Galvanic Cell Notation:</strong> \( \text{Anode} | \text{Anodic Solution} || \text{Cathodic Solution} | \text{Cathode} \)</p>
+        
+            <h3>1.8 Energetics of Chemical Reactions, Chemical Kinetics, Chemical Bonding and Shape of Molecules</h3>
+            <p class="highlight center-formula"><strong>Enthalpy Change (\( \Delta H \)):</strong> Heat change at constant pressure.</p>
+            <p class="highlight center-formula"><strong>Gibbs Free Energy (\( \Delta G \)):</strong> \( \Delta G = \Delta H - T \Delta S \)</p>
+            <p class="highlight center-formula"><strong>Activation Energy (Ea):</strong> The minimum energy required to initiate a chemical reaction.</p>
+            <p class="highlight center-formula"><strong>Arrhenius Equation:</strong> \( k = A e^{-E_a/RT} \)</p>
+            <p class="highlight center-formula"><strong>Heat Capacity (\( C \)):</strong> \( q = C \Delta T \)</p>
+            <p class="highlight center-formula"><strong>Entropy Change (\( \Delta S \)):</strong> \( \Delta S = \frac{q_{\text{rev}}}{T} \)</p>
+            <p class="highlight center-formula"><strong>Clausius-Clapeyron Equation:</strong> \( \ln \frac{P_2}{P_1} = \frac{\Delta H_{\text{vap}}}{R} \left(\frac{1}{T_1} - \frac{1}{T_2}\right) \)</p>
+            <p class="highlight center-formula"><strong>Ionic Bond:</strong> Formed by the transfer of electrons between atoms, leading to the formation of cations and anions.</p>
+            <p class="highlight center-formula"><strong>Hybridization:</strong> \( sp^3, sp^2, sp \) hybridization leads to tetrahedral, trigonal planar, and linear molecular geometries, respectively.</p>
+        </div>
+        
+        
+        <div class="section">
+            <h2>2. Inorganic Chemistry</h2>
+        
+            <h3>2.1 Non-metal</h3>
+            <p class="highlight center-formula"><strong>Water (Molecular Weight):</strong> \( \text{Molar mass of } \text{H}_2\text{O} = 2 \times 1.008 + 15.999 = 18.015 \text{ g/mol} \)</p>
+            <p class="highlight center-formula"><strong>Ozone (Molecular Weight):</strong> \( \text{Molar mass of } \text{O}_3 = 3 \times 15.999 = 47.997 \text{ g/mol} \)</p>
+            <p class="highlight center-formula"><strong>Halogens (General Reaction):</strong> \( \text{X}_2 + \text{2NaCl} \rightarrow \text{2NaX} + \text{Cl}_2 \)</p>
+            <p class="highlight center-formula"><strong>Nitrogen Dioxide (Molecular Weight):</strong> \( \text{Molar mass of } \text{NO}_2 = 14.007 + 2 \times 15.999 = 46.005 \text{ g/mol} \)</p>
+            <p class="highlight center-formula"><strong>Hydrogen Peroxide (Molecular Weight):</strong> \( \text{Molar mass of } \text{H}_2\text{O}_2 = 2 \times 1.008 + 2 \times 15.999 = 34.016 \text{ g/mol} \)</p>
+            <p class="highlight center-formula"><strong>Ozone (Reaction with Iodide):</strong> \( \text{O}_3 + \text{2I}^- + \text{2H}^+ \rightarrow \text{I}_2 + \text{O}_2 + \text{H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Ozone (Decomposition Reaction):</strong> \( \text{2O}_3 \rightarrow \text{3O}_2 \)</p>
+            <p class="highlight center-formula"><strong>Nitrogen Oxides (General Reaction):</strong> \( \text{2NO + O}_2 \rightarrow \text{2NO}_2 \)</p>
+            <p class="highlight center-formula"><strong>Ammonia Synthesis (Haber Process):</strong> \( \text{N}_2 + 3\text{H}_2 \rightarrow 2\text{NH}_3 \)</p>
+            <p class="highlight center-formula"><strong>Sulfuric Acid Production (Contact Process):</strong> \( 2\text{SO}_2 + \text{O}_2 \rightarrow 2\text{SO}_3 \)</p>
+            <p class="highlight center-formula"><strong>Phosphorus Pentachloride (Formation):</strong> \( \text{P}_4 + 5\text{Cl}_2 \rightarrow 2\text{PCl}_5 \)</p>
+            <p class="highlight center-formula"><strong>Carbon Dioxide (Formation):</strong> \( \text{C} + \text{O}_2 \rightarrow \text{CO}_2 \)</p>
+            <p class="highlight center-formula"><strong>Hydrogen Chloride (Formation):</strong> \( \text{H}_2 + \text{Cl}_2 \rightarrow 2\text{HCl} \)</p>
+        
+            <h3>2.2 Metals</h3>
+            <p class="highlight center-formula"><strong>Metallurgical Principle:</strong> The process of extracting metals from their ores.</p>
+            <p class="highlight center-formula"><strong>Alkali Metals General Reaction:</strong> \( \text{2Na + 2H}_2\text{O} \rightarrow 2\text{NaOH} + \text{H}_2 \)</p>
+            <p class="highlight center-formula"><strong>Alkaline Earth Metals General Reaction:</strong> \( \text{Ca + 2H}_2\text{O} \rightarrow \text{Ca(OH)}_2 + \text{H}_2 \)</p>
+            <p class="highlight center-formula"><strong>Coinage Metals (Copper):</strong> \( \text{Cu} \text{ has a density of } 8.96 \text{ g/cm}^3 \)</p>
+            <p class="highlight center-formula"><strong>Iron (Reduction of Hematite):</strong> \( \text{Fe}_2\text{O}_3 + 3 \text{CO} \rightarrow 2 \text{Fe} + 3 \text{CO}_2 \)</p>
+            <p class="highlight center-formula"><strong>Gold (Aqua Regia Reaction):</strong> \( \text{Au} + \text{3HCl} + \text{HNO}_3 \rightarrow \text{H[AuCl}_4]^- + \text{NO} + \text{2H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Aluminum (Reaction with Oxygen):</strong> \( 4 \text{Al} + 3 \text{O}_2 \rightarrow 2 \text{Al}_2\text{O}_3 \)</p>
+            <p class="highlight center-formula"><strong>Copper (Reaction with Sulfuric Acid):</strong> \( \text{Cu} + 2 \text{H}_2\text{SO}_4 \rightarrow \text{CuSO}_4 + \text{SO}_2 + 2 \text{H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Lead (Reaction with Nitric Acid):</strong> \( \text{Pb} + 4 \text{HNO}_3 \rightarrow \text{Pb(NO}_3)_2 + \text{2NO}_2 + 2 \text{H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Zinc (Reaction with Hydrochloric Acid):</strong> \( \text{Zn} + 2\text{HCl} \rightarrow \text{ZnCl}_2 + \text{H}_2 \)</p>
+            <p class="highlight center-formula"><strong>Aluminum (Thermite Reaction):</strong> \( \text{2Al} + \text{Fe}_2\text{O}_3 \rightarrow 2\text{Fe} + \text{Al}_2\text{O}_3 \)</p>
+            <p class="highlight center-formula"><strong>Nickel (Reaction with Hydrogen):</strong> \( \text{Ni} + \text{H}_2 \rightarrow \text{NiH}_2 \)</p>
+            <p class="highlight center-formula"><strong>Cobalt (Formation of Cobalt Chloride):</strong> \( \text{Co} + 2\text{Cl}_2 \rightarrow \text{CoCl}_2 \)</p>
+        
+            <h3>2.3 Extraction of Metal</h3>
+            <p class="highlight center-formula"><strong>Zinc Extraction (Reduction):</strong> \( \text{ZnO + C} \rightarrow \text{Zn + CO} \)</p>
+            <p class="highlight center-formula"><strong>Mercury Extraction (Reduction):</strong> \( \text{HgS} + \text{O}_2 \rightarrow \text{Hg} + \text{SO}_2 \)</p>
+            <p class="highlight center-formula"><strong>Iron Compound (Rusting):</strong> \( \text{4Fe + 3O}_2 \rightarrow \text{2Fe}_2\text{O}_3 \)</p>
+            <p class="highlight center-formula"><strong>Aluminum Extraction (Hall-Héroult Process):</strong> \( \text{2Al}_2\text{O}_3 + 3\text{C} \rightarrow 4\text{Al} + 3\text{CO}_2 \)</p>
+            <p class="highlight center-formula"><strong>Copper Extraction (Froth Floatation):</strong> \( \text{CuFeS}_2 + \text{O}_2 \rightarrow \text{Cu}_2\text{O} + \text{Fe}_2\text{O}_3 \)</p>
+            <p class="highlight center-formula"><strong>Lead Extraction (Reduction of Lead Oxide):</strong> \( \text{PbO} + \text{C} \rightarrow \text{Pb} + \text{CO} \)</p>
+            <p class="highlight center-formula"><strong>Nickel Extraction (Carbonyl Process):</strong> \( \text{Ni} + \text{4CO} \rightarrow \text{Ni(CO)}_4 \)</p>
+            <p class="highlight center-formula"><strong>Chromium Extraction (Reduction with Aluminum):</strong> \( \text{Cr}_2\text{O}_3 + 2 \text{Al} \rightarrow 2 \text{Cr} + \text{Al}_2\text{O}_3 \)</p>
+            <p class="highlight center-formula"><strong>Silver Extraction (Cyanide Process):</strong> \( \text{2Ag} + \text{NaCN} + \text{H}_2\text{O} + \text{O}_2 \rightarrow \text{2[Ag(CN)}_2]^- + \text{2NaOH} \)</p>
+            <p class="highlight center-formula"><strong>Magnesium Extraction (Pidgeon Process):</strong> \( \text{Si} + 2\text{MgO} \rightarrow 2\text{Mg} + \text{SiO}_2 \)</p>
+            <p class="highlight center-formula"><strong>Iron Extraction (Blast Furnace):</strong> \( \text{Fe}_2\text{O}_3 + 3\text{CO} \rightarrow 2\text{Fe} + 3\text{CO}_2 \)</p>
+            <p class="highlight center-formula"><strong>Cobalt Extraction (Reduction with Hydrogen):</strong> \( \text{Co}_2\text{O}_3 + 3\text{H}_2 \rightarrow 2\text{Co} + 3\text{H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Manganese Extraction (Reduction with Carbon):</strong> \( \text{MnO}_2 + 2\text{C} \rightarrow \text{Mn} + 2\text{CO} \)</p>
+            <p class="highlight center-formula"><strong>Titanium Extraction (Kroll Process):</strong> \( \text{TiO}_2 + 2\text{Cl}_2 + 2\text{C} \rightarrow \text{TiCl}_4 + 2\text{CO} \)</p>
+        </div>
+        
+        
+        <div class="section">
+            <h2>3. Organic Chemistry</h2>
+        
+            <h3>3.1 Introduction</h3>
+            <p class="highlight center-formula"><strong>General Formula for Alkanes:</strong> \( \text{C}_n\text{H}_{2n+2} \)</p>
+            <p class="highlight center-formula"><strong>General Formula for Alkenes:</strong> \( \text{C}_n\text{H}_{2n} \)</p>
+            <p class="highlight center-formula"><strong>General Formula for Alkynes:</strong> \( \text{C}_n\text{H}_{2n-2} \)</p>
+            <p class="highlight center-formula"><strong>General Formula for Alcohols:</strong> \( \text{R-OH} \)</p>
+            <p class="highlight center-formula"><strong>General Formula for Carboxylic Acids:</strong> \( \text{R-COOH} \)</p>
+            <p class="highlight center-formula"><strong>Nomenclature Rule (IUPAC):</strong> Identifying longest carbon chain, numbering, and naming substituents.</p>
+            <p class="highlight center-formula"><strong>Reaction Mechanism:</strong> A sequence of steps (elementary reactions) that describe the conversion of reactants to products.</p>
+        
+            <h3>3.2 Hydrocarbons</h3>
+            <p class="highlight center-formula"><strong>Hydrocarbon General Formula (Aromatic):</strong> \( \text{C}_6\text{H}_6 \) (Benzene)</p>
+            <p class="highlight center-formula"><strong>Alkane Combustion Reaction:</strong> \( \text{C}_n\text{H}_{2n+2} + (n + \frac{1}{4}(2n + 2)) \text{O}_2 \rightarrow n \text{CO}_2 + (n + 1) \text{H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Alkene Addition Reaction (Hydrogenation):</strong> \( \text{C}_n\text{H}_{2n} + \text{H}_2 \rightarrow \text{C}_n\text{H}_{2n+2} \)</p>
+            <p class="highlight center-formula"><strong>Alkyne Addition Reaction (Hydrohalogenation):</strong> \( \text{C}_n\text{H}_{2n-2} + \text{HX} \rightarrow \text{C}_n\text{H}_{2n-1}\text{X} \)</p>
+            <p class="highlight center-formula"><strong>Benzene Electrophilic Substitution:</strong> \( \text{C}_6\text{H}_6 + \text{X}_2 \rightarrow \text{C}_6\text{H}_5\text{X} + \text{HX} \)</p>
+            <p class="highlight center-formula"><strong>Alcohol Oxidation (Primary):</strong> \( \text{R-CH}_2\text{OH} + \text{O} \rightarrow \text{R-CHO} + \text{H}_2\text{O} \rightarrow \text{R-COOH} \)</p>
+            <p class="highlight center-formula"><strong>Alkene Ozonolysis:</strong> \( \text{R-CH=CH-R} + \text{O}_3 \rightarrow \text{R-CHO} + \text{R-CHO} \)</p>
+        
+            <h3>3.3 Haloalkanes and Haloarenes</h3>
+            <p class="highlight center-formula"><strong>Haloalkane Nucleophilic Substitution:</strong> \( \text{R-X} + \text{Nu}^- \rightarrow \text{R-Nu} + \text{X}^- \)</p>
+            <p class="highlight center-formula"><strong>Haloalkane Elimination Reaction:</strong> \( \text{R-X} + \text{Base} \rightarrow \text{R=R} + \text{HX} \)</p>
+            <p class="highlight center-formula"><strong>Haloarene Nucleophilic Substitution (Sandmeyer Reaction):</strong> \( \text{Ar-NH}_2 + \text{NaNO}_2 + \text{HCl} \rightarrow \text{Ar-NO}_2 + \text{H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Haloarene Reactivity:</strong> \( \text{Ar-X} + \text{NaOH} \rightarrow \text{Ar-OH} + \text{NaX} \)</p>
+            <p class="highlight center-formula"><strong>Reactivity of Haloalkanes (Wurtz Reaction):</strong> \( 2 \text{R-X} + 2 \text{Na} \rightarrow \text{R-R} + 2 \text{NaX} \)</p>
+        
+            <h3>3.4 Alcohols, Phenols, and Ethers</h3>
+            <p class="highlight center-formula"><strong>Alcohol Dehydration (Esterification):</strong> \( \text{R-OH} + \text{R'-COOH} \rightarrow \text{R-COOR'} + \text{H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Phenol Reaction with Bromine:</strong> \( \text{C}_6\text{H}_5\text{OH} + \text{Br}_2 \rightarrow \text{C}_6\text{H}_4(\text{Br})_3 + \text{HBr} \)</p>
+            <p class="highlight center-formula"><strong>Ether Cleavage with HI:</strong> \( \text{R-O-R'} + \text{HI} \rightarrow \text{R-I} + \text{R'-I} + \text{H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Phenol as an Acid:</strong> \( \text{C}_6\text{H}_5\text{OH} + \text{NaOH} \rightarrow \text{C}_6\text{H}_5\text{ONa} + \text{H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Ethers (General Formula):</strong> \( \text{R-O-R'} \)</p>
+            <p class="highlight center-formula"><strong>Alcohol Reaction with Acid Chloride:</strong> \( \text{R-OH} + \text{R'-COCl} \rightarrow \text{R-COOR'} + \text{HCl} \)</p>
+        
+            <h3>3.5 Aldehydes, Ketones, Carboxylic Acids, and Derivatives</h3>
+            <p class="highlight center-formula"><strong>Aldehyde Oxidation:</strong> \( \text{R-CHO} + \text{O} \rightarrow \text{R-COOH} \)</p>
+            <p class="highlight center-formula"><strong>Ketone Reduction (Clemmensen Reduction):</strong> \( \text{R-CO-R'} + \text{Zn(Hg)} \rightarrow \text{R-CH}_2\text{-R'} \)</p>
+            <p class="highlight center-formula"><strong>Carboxylic Acid Esterification:</strong> \( \text{R-COOH} + \text{R'-OH} \rightarrow \text{R-COOR'} + \text{H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Carboxylic Acid Reaction with Base:</strong> \( \text{R-COOH} + \text{NaOH} \rightarrow \text{R-COONa} + \text{H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Ketone Formation (Friedel-Crafts Acylation):</strong> \( \text{Ar-H} + \text{R-COCl} \rightarrow \text{Ar-CO-R} + \text{HCl} \)</p>
+            <p class="highlight center-formula"><strong>Carboxylic Acid Decarboxylation:</strong> \( \text{R-COOH} \rightarrow \text{R-H} + \text{CO}_2 \)</p>
+        
+            <h3>3.6 Nitro Compounds and Amines</h3>
+            <p class="highlight center-formula"><strong>Nitrobenzene Reduction (Beckmann Rearrangement):</strong> \( \text{C}_6\text{H}_5\text{NO}_2 + \text{H}_2 \rightarrow \text{C}_6\text{H}_5\text{NH}_2 \)</p>
+            <p class="highlight center-formula"><strong>Amines Formation (N-alkylation):</strong> \( \text{R-NH}_2 + \text{R'-X} \rightarrow \text{R-NR'}_2 + \text{HX} \)</p>
+            <p class="highlight center-formula"><strong>Amines Reaction with Acyl Chlorides:</strong> \( \text{R-NH}_2 + \text{R'-COCl} \rightarrow \text{R-NH-COR'} + \text{HCl} \)</p>
+            <p class="highlight center-formula"><strong>Nitro Compounds Reactivity (Reduction):</strong> \( \text{R-NO}_2 + 3\text{H}_2 \rightarrow \text{R-NH}_2 + 2\text{H}_2\text{O} \)</p>
+            <p class="highlight center-formula"><strong>Amines as Bases:</strong> \( \text{R-NH}_2 + \text{HCl} \rightarrow \text{R-NH}_3^+ \text{Cl}^- \)</p>
+            <p class="highlight center-formula"><strong>Amines Reaction with Nitroalkanes (Henry Reaction):</strong> \( \text{R-NH}_2 + \text{R'-NO}_2 \rightarrow \text{R-NH-R'} + \text{H}_2\text{O} \)</p>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Chemistry Topics. All rights reserved.</p>
+        <p>Feedback and suggestions? Join our <a href="https://discord.gg/YOUR_DISCORD_LINK">Discord</a>.</p>
+    </footer>
+
+    <script>
+        // Disable text selection, right-click, copying, and other actions
+        document.addEventListener('selectstart', (e) => e.preventDefault());
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+
+        // Disable PrintScreen and Ctrl+P
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'PrintScreen') {
+                e.preventDefault();
+                alert("Screenshotting is disabled.");
+            }
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                askAdminLogin();
+            }
+        });
+
+        // Function to ask admin password for printing
+        function askAdminLogin() {
+            const adminPassword = "CRUISE_2908i";
+            const userPassword = prompt("Enter admin password to print this page:");
+            if (userPassword === adminPassword) {
+                alert("Login successful. You can now print the page.");
+                window.print();
+            } else {
+                alert("Incorrect password. You cannot print this page.");
+            }
+        }
+
+        // Search through formulas
+        function searchFormulas() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const formulas = document.querySelectorAll('.formula');
+            formulas.forEach(formula => {
+                const text = formula.textContent.toLowerCase();
+                formula.style.display = text.includes(input) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>

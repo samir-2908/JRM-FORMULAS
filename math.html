@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics Formulas</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #2196F3;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #2196F3;
+            padding: 1rem 2rem;
+            margin: 0 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #000000;
+        }
+
+        .container {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .formula {
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid #2196F3;
+            padding-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #2196F3;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+        }
+
+        #search {
+            margin-bottom: 1.5rem;
+            padding: 0.75rem;
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .highlight {
+            background-color: #ffffcc;
+            border-left: 5px solid #ffeb3b;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            width: fit-content;
+            text-align: center;
+        }
+
+        .important {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        .center-formula {
+            text-align: center;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                padding: 0.5rem 1rem;
+                margin: 0 0.5rem;
+            }
+
+            #search {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mathematics Formulas</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="chemistry.html">Chemistry</a>
+        <a href="physics.html">Physics</a>
+    </nav>
+
+    <div class="container">
+        <input type="text" id="search" placeholder="Search formulas..." onkeyup="searchFormulas()">
+
+        <div class="formula">
+            <h2>1. Set, Logic, and Functions</h2>
+            <h3>1.1 Sets</h3>
+            <p class="highlight center-formula"><strong>Union of Sets:</strong> \( A \cup B = \{ x \mid x \in A \text{ or } x \in B \} \)</p>
+            <p class="highlight center-formula"><strong>Intersection of Sets:</strong> \( A \cap B = \{ x \mid x \in A \text{ and } x \in B \} \)</p>
+            <p class="highlight center-formula"><strong>Difference of Sets:</strong> \( A - B = \{ x \mid x \in A \text{ and } x \notin B \} \)</p>
+            <p class="highlight center-formula"><strong>Complement of a Set:</strong> \( A^c = \{ x \mid x \notin A \} \)</p>
+            <p class="highlight center-formula"><strong>Subset:</strong> \( A \subseteq B \text{ if every element of } A \text{ is also in } B \)</p>
+            <p class="highlight center-formula"><strong>Proper Subset:</strong> \( A \subset B \text{ if } A \subseteq B \text{ and } A \neq B \)</p>
+            <p class="highlight center-formula"><strong>Power Set:</strong> \( \mathcal{P}(A) \text{ is the set of all subsets of } A \)</p>
+            <p class="highlight center-formula"><strong>Cartesian Product:</strong> \( A \times B = \{ (a, b) \mid a \in A \text{ and } b \in B \} \)</p>
+            <p class="highlight center-formula"><strong>Symmetric Difference:</strong> \( A \Delta B = (A - B) \cup (B - A) \)</p>
+            <p class="highlight center-formula"><strong>Disjoint Sets:</strong> \( A \cap B = \emptyset \text{ (sets } A \text{ and } B \text{ have no elements in common)} \)</p>
+            <p class="highlight center-formula"><strong>Venn Diagram Relationships (Two Sets):</strong></p>
+            <p class="highlight center-formula">
+              \[
+              A \cup B = A + B - A \cap B
+              \]
+            </p>
+            <p class="highlight center-formula"><strong>Venn Diagram Relationships (Three Sets):</strong></p>
+            <p class="highlight center-formula">
+              \[
+              A \cup B \cup C = A + B + C - (A \cap B) - (B \cap C) - (C \cap A) + (A \cap B \cap C)
+              \]
+            </p>
+            <h3>1.2 Real Number System</h3>
+            <p class="highlight center-formula"><strong>Natural Numbers:</strong> \( \mathbb{N} = \{1, 2, 3, \ldots\} \)</p>
+            <p class="highlight center-formula"><strong>Integers:</strong> \( \mathbb{Z} = \{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\} \)</p>
+            <p class="highlight center-formula"><strong>Rational Numbers:</strong> \( \mathbb{Q} = \left\{\frac{p}{q} \mid p, q \in \mathbb{Z}, q \neq 0\right\} \)</p>
+            <p class="highlight center-formula"><strong>Real Numbers:</strong> \( \mathbb{R} = \text{All numbers on the number line} \)</p>
+            <p class="highlight center-formula"><strong>Complex Numbers:</strong> \( \mathbb{C} = \{a + bi \mid a, b \in \mathbb{R}\} \)</p>
+            <h3>1.3 Intervals</h3>
+            <p class="highlight center-formula"><strong>Open Interval:</strong> \( (a, b) \)</p>
+            <p class="highlight center-formula"><strong>Closed Interval:</strong> \( [a, b] \)</p>
+            <p class="highlight center-formula"><strong>Half-Open Interval:</strong> \( [a, b) \text{ or } (a, b] \)</p>
+            <h3>1.4 Absolute Value</h3>
+            <p class="highlight center-formula"><strong>Absolute Value of \( x \):</strong> \( |x| = \begin{cases} 
+  x & \text{if } x \geq 0 \\
+  -x & \text{if } x < 0 
+  \end{cases} \)</p>
+            <h3>1.5 Logic</h3>
+            <p class="highlight center-formula"><strong>Conjunction (AND):</strong> \( A \land B \)</p>
+            <p class="highlight center-formula"><strong>Disjunction (OR):</strong> \( A \lor B \)</p>
+            <p class="highlight center-formula"><strong>Negation:</strong> \( \neg A \)</p>
+            <p class="highlight center-formula"><strong>Implication:</strong> \( A \rightarrow B \)</p>
+            <p class="highlight center-formula"><strong>Biconditional:</strong> \( A \leftrightarrow B \)</p>
+            <p class="highlight center-formula"><strong>Exclusive OR (XOR):</strong> \( A \oplus B \)</p>
+            <p><strong>Truth Table:</strong></p>
+            <p class="highlight center-formula"><strong>For \( A \land B \):</strong></p>
+            <p class="highlight center-formula">
+              \[
+              \begin{array}{|c|c|c|}
+              \hline
+              A & B & A \land B \\
+              \hline
+              T & T & T \\
+              T & F & F \\
+              F & T & F \\
+              F & F & F \\
+              \hline
+              \end{array}
+              \]
+            </p>
+            <p class="highlight center-formula"><strong>For \( A \lor B \):</strong></p>
+            <p class="highlight center-formula">
+              \[
+              \begin{array}{|c|c|c|}
+              \hline
+              A & B & A \lor B \\
+              \hline
+              T & T & T \\
+              T & F & T \\
+              F & T & T \\
+              F & F & F \\
+              \hline
+              \end{array}
+              \]
+            </p>
+            <p class="highlight center-formula"><strong>For \( \neg A \):</strong></p>
+            <p class="highlight center-formula">
+              \[
+              \begin{array}{|c|c|}
+              \hline
+              A & \neg A \\
+              \hline
+              T & F \\
+              F & T \\
+              \hline
+              \end{array}
+              \]
+            </p>
+            <h3>1.6 Functions</h3>
+            <p class="highlight center-formula"><strong>Function Definition:</strong> \( f: A \rightarrow B \text{ where } f(x) \in B \text{ for } x \in A \)</p>
+            <p class="highlight center-formula"><strong>Domain:</strong> The set of all possible inputs \( x \)</p>
+            <p class="highlight center-formula"><strong>Range:</strong> The set of all possible outputs \( f(x) \)</p>
+            <p class="highlight center-formula"><strong>Function Composition:</strong> \( (f \circ g)(x) = f(g(x)) \)</p>
+            <p class="highlight center-formula"><strong>Inverse Function:</strong> \( f^{-1}(x) \text{ such that } f(f^{-1}(x)) = x \text{ and } f^{-1}(f(x)) = x \)</p>
+            <p class="highlight center-formula"><strong>Piecewise Function:</strong> 
+              \[
+              f(x) = \begin{cases} 
+              f_1(x) & \text{if } x \text{ in domain of } f_1 \\
+              f_2(x) & \text{if } x \text{ in domain of } f_2 \\
+              \end{cases}
+              \]
+            </p>
+            <p class="highlight center-formula"><strong>Linear Function:</strong> \( f(x) = mx + b \)</p>
+            <p class="highlight center-formula"><strong>Quadratic Function:</strong> \( f(x) = ax^2 + bx + c \)</p>
+            <p class="highlight center-formula"><strong>Polynomial Function:</strong> \( f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \)</p>
+            <p class="highlight center-formula"><strong>Exponential Function:</strong> \( f(x) = a \cdot b^x \)</p>
+            <p class="highlight center-formula"><strong>Logarithmic Function:</strong> \( f(x) = a \cdot \log_b(x) + c \)</p>
+            <p class="highlight center-formula"><strong>Sine Function:</strong> \( \sin(x) \)</p>
+            <p class="highlight center-formula"><strong>Cosine Function:</strong> \( \cos(x) \)</p>
+            <p class="highlight center-formula"><strong>Tangent Function:</strong> \( \tan(x) \)</p>
+        </div>
+
+        <div class="formula">
+            <h2>2. Algebra</h2>
+            <h3>2.1 Quadratic Equations</h3>
+            <p class="highlight center-formula"><strong>Quadratic Formula:</strong> \( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \)</p>
+            <p class="highlight center-formula"><strong>Discriminant:</strong> \( \Delta = b^2 - 4ac \)</p>
+            <p class="highlight center-formula"><strong>Vertex Form:</strong> \( y = a(x - h)^2 + k \)</p>
+            <p class="highlight center-formula"><strong>Standard Form:</strong> \( ax^2 + bx + c = 0 \)</p>
+            <p class="highlight center-formula"><strong>Factoring:</strong> \( ax^2 + bx + c = a(x - r_1)(x - r_2) \)</p>
+            <p class="highlight center-formula"><strong>Sum of Roots:</strong> \( r_1 + r_2 = -\frac{b}{a} \)</p>
+            <p class="highlight center-formula"><strong>Product of Roots:</strong> \( r_1 \cdot r_2 = \frac{c}{a} \)</p>
+
+            <h3>2.2 Polynomials</h3>
+            <p class="highlight center-formula"><strong>Polynomial Function:</strong> \( p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \)</p>
+            <p class="highlight center-formula"><strong>Degree of a Polynomial:</strong> The highest power of \( x \) in \( p(x) \)</p>
+            <p class="highlight center-formula"><strong>Leading Coefficient:</strong> The coefficient \( a_n \) of the term with the highest power</p>
+            <p class="highlight center-formula"><strong>Remainder Theorem:</strong> \( p(c) \text{ is the remainder when } p(x) \text{ is divided by } (x - c) \)</p>
+            <p class="highlight center-formula"><strong>Factor Theorem:</strong> \( (x - c) \text{ is a factor of } p(x) \text{ if } p(c) = 0 \)</p>
+            <p class="highlight center-formula"><strong>Descartes' Rule of Signs:</strong> The number of positive real roots is equal to the number of sign changes in \( p(x) \) or less by an even number</p>
+            <p class="highlight center-formula"><strong>Synthetic Division:</strong> Used for dividing polynomials by a linear factor \( x - c \)</p>
+
+            <h3>2.3 Binomial Theorem</h3>
+            <p class="highlight center-formula"><strong>Binomial Expansion:</strong> \( (x + y)^n = \sum_{k=0}^n \binom{n}{k} x^{n-k} y^k \)</p>
+            <p class="highlight center-formula"><strong>Binomial Coefficient:</strong> \( \binom{n}{k} = \frac{n!}{k!(n - k)!} \)</p>
+            <p class="highlight center-formula"><strong>Expansion of \( (x - y)^n \):</strong> \( (x - y)^n = \sum_{k=0}^n \binom{n}{k} x^{n-k} (-y)^k \)</p>
+            <p class="highlight center-formula"><strong>General Term:</strong> \( T_{k+1} = \binom{n}{k} x^{n-k} y^k \)</p>
+        </div>
+
+        <div class="formula">
+            <h2>3. Coordinate Geometry</h2>
+            <p class="highlight center-formula"><strong>Distance Formula:</strong> \( d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \)</p>
+            <p class="highlight center-formula"><strong>Midpoint Formula:</strong> \( \text{Midpoint} = \left( \frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2} \right) \)</p>
+            <p class="highlight center-formula"><strong>Slope Formula:</strong> \( m = \frac{y_2 - y_1}{x_2 - x_1} \)</p>
+            <p class="highlight center-formula"><strong>Equation of a Line:</strong></p>
+            <p class="highlight center-formula">Slope-Intercept Form: \( y = mx + c \)</p>
+            <p class="highlight center-formula">Point-Slope Form: \( y - y_1 = m(x - x_1) \)</p>
+            <p class="highlight center-formula">Standard Form: \( Ax + By = C \)</p>
+            <p class="highlight center-formula"><strong>Distance from a Point to a Line:</strong> \( \text{Distance} = \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}} \)</p>
+            <p class="highlight center-formula"><strong>Distance Between Two Parallel Lines:</strong> \( \text{Distance} = \frac{|C_2 - C_1|}{\sqrt{A^2 + B^2}} \)</p>
+            <p class="highlight center-formula"><strong>Circle Equation:</strong> \( (x - h)^2 + (y - k)^2 = r^2 \)</p>
+            <p class="highlight center-formula">Standard Form: \( x^2 + y^2 + 2gx + 2fy + c = 0 \)</p>
+            <p class="highlight center-formula"><strong>Parabola Equations:</strong></p>
+            <p class="highlight center-formula">Opening Upwards/Downwards: \( y = a(x - h)^2 + k \)</p>
+            <p class="highlight center-formula">Opening Sideways: \( x = a(y - k)^2 + h \)</p>
+            <p class="highlight center-formula"><strong>Angle Between Two Lines:</strong> \( \tan \theta = \left| \frac{m_1 - m_2}{1 + m_1 m_2} \right| \)</p>
+            <p class="highlight center-formula"><strong>Distance from Origin to a Point:</strong> \( d = \sqrt{x^2 + y^2} \)</p>
+            <p class="highlight center-formula"><strong>Reflection of a Point Across the x-axis:</strong> \( (x, -y) \)</p>
+            <p class="highlight center-formula"><strong>Reflection of a Point Across the y-axis:</strong> \( (-x, y) \)</p>
+            <p class="highlight center-formula"><strong>Equation of an Ellipse:</strong> \( \frac{(x - h)^2}{a^2} + \frac{(y - k)^2}{b^2} = 1 \)</p>
+            <p class="highlight center-formula"><strong>Equation of a Hyperbola:</strong> \( \frac{(x - h)^2}{a^2} - \frac{(y - k)^2}{b^2} = 1 \)</p>
+        </div>
+
+        <div class="formula">
+            <h2>4. Calculus</h2>
+
+            <p class="highlight center-formula"><strong>Limits:</strong></p>
+            <p class="highlight center-formula">\( \lim_{{x \to a}} f(x) = L \)</p>
+            <p class="highlight center-formula">\( \lim_{{x \to \infty}} \frac{1}{x} = 0 \)</p>
+            <p class="highlight center-formula">\( \lim_{{x \to a}} [f(x) + g(x)] = \lim_{{x \to a}} f(x) + \lim_{{x \to a}} g(x) \)</p>
+
+            <p class="highlight center-formula"><strong>Derivatives:</strong></p>
+            <p class="highlight center-formula">\( \frac{d}{dx} [c] = 0 \) </p>
+            <p class="highlight center-formula">\( \frac{d}{dx} [x^n] = nx^{n-1} \)</p>
+            <p class="highlight center-formula">\( \frac{d}{dx} [\sin x] = \cos x \)</p>
+            <p class="highlight center-formula">\( \frac{d}{dx} [\cos x] = -\sin x \)</p>
+            <p class="highlight center-formula">\( \frac{d}{dx} [e^x] = e^x \)</p>
+            <p class="highlight center-formula">\( \frac{d}{dx} [\ln x] = \frac{1}{x} \)</p>
+            <p class="highlight center-formula">\( \frac{d}{dx} [f(g(x))] = f'(g(x)) \cdot g'(x) \) (Chain Rule)</p>
+            <p class="highlight center-formula">\( \frac{d}{dx} \left[ \frac{u}{v} \right] = \frac{u'v - uv'}{v^2} \) (Quotient Rule)</p>
+            <p class="highlight center-formula">\( \frac{d}{dx} [u \cdot v] = u'v + uv' \) (Product Rule)</p>
+
+            <p class="highlight center-formula"><strong>Integrals:</strong></p>
+            <p class="highlight center-formula">\( \int c \, dx = cx + C \)</p>
+            <p class="highlight center-formula">\( \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \) (for \( n \neq -1 \))</p>
+            <p class="highlight center-formula">\( \int \sin x \, dx = -\cos x + C \)</p>
+            <p class="highlight center-formula">\( \int \cos x \, dx = \sin x + C \)</p>
+            <p class="highlight center-formula">\( \int e^x \, dx = e^x + C \)</p>
+            <p class="highlight center-formula">\( \int \frac{1}{x} \, dx = \ln |x| + C \)</p>
+            <p class="highlight center-formula">\( \int_a^b f(x) \, dx \) (Definite Integral)</p>
+            <p class="highlight center-formula">\( \int f'(x) \, dx = f(x) + C \) (Fundamental Theorem of Calculus)</p>
+
+            <p class="highlight center-formula"><strong>Series and Sequences:</strong></p>
+            <p class="highlight center-formula">\( \sum_{i=1}^{n} a_i \) (Sum of a Series)</p>
+            <p class="highlight center-formula">\( \int_{a}^{b} f(x) \, dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i^*) \Delta x \) (Definite Integral as Limit of Sums)</p>
+            <p class="highlight center-formula">\( \text{Taylor Series: } f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!} (x-a)^n \)</p>
+            <p class="highlight center-formula">\( \text{Maclaurin Series: } f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n \)</p>
+
+            <p class="highlight center-formula"><strong>Partial Fractions:</strong></p>
+            <p class="highlight center-formula">\( \frac{A}{(x - a)} + \frac{B}{(x - b)} \) for \( \frac{P(x)}{Q(x)} \) where \( \text{degree of } P < \text{degree of } Q \)</p>
+        </div>
+
+        <div class="formula">
+            <h2>5. Trigonometry</h2>
+            <p class="highlight center-formula"><strong>Pythagorean Identities:</strong></p>
+            <p class="highlight center-formula">\( \sin^2 \theta + \cos^2 \theta = 1 \)</p>
+            <p class="highlight center-formula">\( 1 + \tan^2 \theta = \sec^2 \theta \)</p>
+            <p class="highlight center-formula">\( 1 + \cot^2 \theta = \csc^2 \theta \)</p>
+            
+            <p class="highlight center-formula"><strong>Angle Sum and Difference Identities:</strong></p>
+            <p class="highlight center-formula">\( \sin(\alpha + \beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta \)</p>
+            <p class="highlight center-formula">\( \cos(\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta \)</p>
+            <p class="highlight center-formula">\( \tan(\alpha + \beta) = \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \)</p>
+            <p class="highlight center-formula">\( \sin(\alpha - \beta) = \sin \alpha \cos \beta - \cos \alpha \sin \beta \)</p>
+            <p class="highlight center-formula">\( \cos(\alpha - \beta) = \cos \alpha \cos \beta + \sin \alpha \sin \beta \)</p>
+            <p class="highlight center-formula">\( \tan(\alpha - \beta) = \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta} \)</p>
+
+            <p class="highlight center-formula"><strong>Double Angle Identities:</strong></p>
+            <p class="highlight center-formula">\( \sin(2\theta) = 2 \sin \theta \cos \theta \)</p>
+            <p class="highlight center-formula">\( \cos(2\theta) = \cos^2 \theta - \sin^2 \theta \)</p>
+            <p class="highlight center-formula">\( \tan(2\theta) = \frac{2 \tan \theta}{1 - \tan^2 \theta} \)</p>
+
+            <p class="highlight center-formula"><strong>Half Angle Identities:</strong></p>
+            <p class="highlight center-formula">\( \sin^2 \left(\frac{\theta}{2}\right) = \frac{1 - \cos \theta}{2} \)</p>
+            <p class="highlight center-formula">\( \cos^2 \left(\frac{\theta}{2}\right) = \frac{1 + \cos \theta}{2} \)</p>
+            <p class="highlight center-formula">\( \tan^2 \left(\frac{\theta}{2}\right) = \frac{1 - \cos \theta}{1 + \cos \theta} \)</p>
+
+            <p class="highlight center-formula"><strong>Product-to-Sum Formulas:</strong></p>
+            <p class="highlight center-formula">\( \sin A \sin B = \frac{1}{2} [ \cos (A - B) - \cos (A + B) ] \)</p>
+            <p class="highlight center-formula">\( \cos A \cos B = \frac{1}{2} [ \cos (A + B) + \cos (A - B) ] \)</p>
+            <p class="highlight center-formula">\( \sin A \cos B = \frac{1}{2} [ \sin (A + B) + \sin (A - B) ] \)</p>
+
+            <p class="highlight center-formula"><strong>Sum-to-Product Formulas:</strong></p>
+            <p class="highlight center-formula">\( \sin A + \sin B = 2 \sin \left(\frac{A + B}{2}\right) \cos \left(\frac{A - B}{2}\right) \)</p>
+            <p class="highlight center-formula">\( \sin A - \sin B = 2 \cos \left(\frac{A + B}{2}\right) \sin \left(\frac{A - B}{2}\right) \)</p>
+            <p class="highlight center-formula">\( \cos A + \cos B = 2 \cos \left(\frac{A + B}{2}\right) \cos \left(\frac{A - B}{2}\right) \)</p>
+            <p class="highlight center-formula">\( \cos A - \cos B = -2 \sin \left(\frac{A + B}{2}\right) \sin \left(\frac{A - B}{2}\right) \)</p>
+
+            <p class="highlight center-formula"><strong>Trigonometric Ratios in Right Triangles:</strong></p>
+            <p class="highlight center-formula">\( \sin \theta = \frac{\text{Opposite}}{\text{Hypotenuse}} \)</p>
+            <p class="highlight center-formula">\( \cos \theta = \frac{\text{Adjacent}}{\text{Hypotenuse}} \)</p>
+            <p class="highlight center-formula">\( \tan \theta = \frac{\text{Opposite}}{\text{Adjacent}} \)</p>
+
+            <p class="highlight center-formula"><strong>Trigonometric Functions of Special Angles:</strong></p>
+            <p class="highlight center-formula">\( \sin 30^\circ = \frac{1}{2} \)</p>
+            <p class="highlight center-formula">\( \cos 30^\circ = \frac{\sqrt{3}}{2} \)</p>
+            <p class="highlight center-formula">\( \tan 30^\circ = \frac{1}{\sqrt{3}} \)</p>
+
+            <p class="highlight center-formula">\( \sin 45^\circ = \frac{\sqrt{2}}{2} \)</p>
+            <p class="highlight center-formula">\( \cos 45^\circ = \frac{\sqrt{2}}{2} \)</p>
+            <p class="highlight center-formula">\( \tan 45^\circ = 1 \)</p>
+
+            <p class="highlight center-formula">\( \sin 60^\circ = \frac{\sqrt{3}}{2} \)</p>
+            <p class="highlight center-formula">\( \cos 60^\circ = \frac{1}{2} \)</p>
+            <p class="highlight center-formula">\( \tan 60^\circ = \sqrt{3} \)</p>
+        </div>
+
+        <div class="formula">
+            <h2>7. Statistics and Probability</h2>
+
+            <p class="highlight center-formula"><strong>Descriptive Statistics:</strong></p>
+            <p class="highlight center-formula">Mean: \( \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i \)</p>
+            <p class="highlight center-formula">Median: Middle value of sorted data</p>
+            <p class="highlight center-formula">Mode: Most frequent value</p>
+            <p class="highlight center-formula">Variance: \( \sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2 \)</p>
+            <p class="highlight center-formula">Standard Deviation: \( \sigma = \sqrt{\sigma^2} \)</p>
+
+            <p class="highlight center-formula"><strong>Probability:</strong></p>
+            <p class="highlight center-formula">Probability of Event A: \( P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total number of outcomes}} \)</p>
+            <p class="highlight center-formula">Addition Rule: \( P(A \cup B) = P(A) + P(B) - P(A \cap B) \)</p>
+            <p class="highlight center-formula">Conditional Probability: \( P(A|B) = \frac{P(A \cap B)}{P(B)} \)</p>
+            <p class="highlight center-formula">Multiplication Rule: \( P(A \cap B) = P(A) \cdot P(B|A) \)</p>
+            <p class="highlight center-formula">Bayes' Theorem: \( P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} \)</p>
+
+            <p class="highlight center-formula"><strong>Distributions:</strong></p>
+            <p class="highlight center-formula">Binomial Distribution: \( P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} \)</p>
+            <p class="highlight center-formula">Poisson Distribution: \( P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!} \)</p>
+            <p class="highlight center-formula">Normal Distribution: \( Z = \frac{X - \mu}{\sigma} \)</p>
+
+            <p class="highlight center-formula"><strong>Inferential Statistics:</strong></p>
+            <p class="highlight center-formula">Confidence Interval: \( \bar{x} \pm z \frac{\sigma}{\sqrt{n}} \)</p>
+            <p class="highlight center-formula">Hypothesis Testing: \( Z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} \)</p>
+            <p class="highlight center-formula">p-Value: Probability of observing the test statistic as extreme as, or more extreme than, the observed value under the null hypothesis.</p>
+        </div>
+
+        <div class="formula">
+            <h2>7. Vectors</h2>
+
+            <p class="highlight center-formula"><strong>Basic Vector Operations:</strong></p>
+            <p class="highlight center-formula">Vector Addition: \( \mathbf{a} + \mathbf{b} = (a_1 + b_1, a_2 + b_2, a_3 + b_3) \)</p>
+            <p class="highlight center-formula">Scalar Multiplication: \( k \mathbf{a} = (k a_1, k a_2, k a_3) \)</p>
+            <p class="highlight center-formula">Dot Product: \( \mathbf{a} \cdot \mathbf{b} = a_1 b_1 + a_2 b_2 + a_3 b_3 \)</p>
+            <p class="highlight center-formula">Cross Product: \( \mathbf{a} \times \mathbf{b} = (a_2 b_3 - a_3 b_2, a_3 b_1 - a_1 b_3, a_1 b_2 - a_2 b_1) \)</p>
+            <p class="highlight center-formula">Magnitude: \( |\mathbf{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2} \)</p>
+            <p class="highlight center-formula">Unit Vector: \( \hat{\mathbf{a}} = \frac{\mathbf{a}}{|\mathbf{a}|} \)</p>
+
+            <p class="highlight center-formula"><strong>Vector Projections:</strong></p>
+            <p class="highlight center-formula">Projection of \( \mathbf{a} \) onto \( \mathbf{b} \): \( \text{proj}_{\mathbf{b}} \mathbf{a} = \frac{\mathbf{a} \cdot \mathbf{b}}{|\mathbf{b}|^2} \mathbf{b} \)</p>
+            <p class="highlight center-formula">Orthogonal Projection: \( \mathbf{a}_{\perp} = \mathbf{a} - \text{proj}_{\mathbf{b}} \mathbf{a} \)</p>
+
+            <p class="highlight center-formula"><strong>Vector Equations:</strong></p>
+            <p class="highlight center-formula">Line Equation: \( \mathbf{r} = \mathbf{a} + t \mathbf{b} \)</p>
+            <p class="highlight center-formula">Plane Equation: \( \mathbf{r} \cdot \mathbf{n} = d \)</p>
+            <p class="highlight center-formula">Angle Between Vectors: \( \cos \theta = \frac{\mathbf{a} \cdot \mathbf{b}}{|\mathbf{a}| |\mathbf{b}|} \)</p>
+
+            <p class="highlight center-formula"><strong>Vector Spaces:</strong></p>
+            <p class="highlight center-formula">Span of Vectors: The set of all possible linear combinations of given vectors</p>
+            <p class="highlight center-formula">Basis: A set of linearly independent vectors that span the vector space</p>
+            <p class="highlight center-formula">Dimension: The number of vectors in a basis for the vector space</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mathematics Formulas. All rights reserved.</p>
+        <p>Feedback or suggestions? Join our <a href="https://discord.gg/7NhttJdyeC" target="_blank">Discord server</a>.</p>
+    </footer>
+
+    <script>
+        // Disable text selection, right-click, copying, and screenshotting
+        document.addEventListener('selectstart', (e) => e.preventDefault());
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+
+        // Prevent screenshot and printing without admin password
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'PrintScreen') {
+                e.preventDefault();
+                alert("Screenshotting is disabled.");
+            }
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                askAdminLogin();
+            }
+        });
+
+        // Admin login for printing
+        function askAdminLogin() {
+            const adminPassword = "CRUISE_2908i";
+            const userPassword = prompt("Enter admin password to print this page:");
+            if (userPassword === adminPassword) {
+                alert("Login successful. You can now print the page.");
+                window.print();
+            } else {
+                alert("Incorrect password. You cannot print this page.");
+            }
+        }
+
+        // Search function for formulas
+        function searchFormulas() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const formulas = document.querySelectorAll('.formula');
+            formulas.forEach(formula => {
+                const text = formula.textContent.toLowerCase();
+                formula.style.display = text.includes(input) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>
